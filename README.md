@@ -9,4 +9,3 @@ La app te permite observar un histograma y un diagráma de dispersión:
 - Selecciona la casilla debajo de la leyenda "Compare Yourself" y se mostrará una gráfica de dispersión donde se observa la relación precio/odómetro/transmisión de los automóviles.
 
 Enlace a proyecto: https://project-5-ke5i.onrender.com/
-
