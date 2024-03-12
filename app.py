@@ -17,19 +17,21 @@ if hist_button:  # al hacer clic en el botón
 
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
-    fig.show()
 
-# La siguiente sección se ajustó para tener una estructura coherente
+st.header('Compare Yourself')
+
+# Creación de scatter cpn checkbox
 build_scatter = st.checkbox('Construir un diagráma de dispersión para observar relación: precio, odómetro y transmisión')
 
 if build_scatter:  # si la casilla de verificación está seleccionada
-    st.write('Construir un diagráma de dispersión para observar relación: precio, odómetro y transmisión')
-    # crear un histograma
-    fig = px.scatter(data_frame=car_data,
-                     x="odometer",
-                     y="price",
-                     color="transmission",
-                     width=1000,
-                     height=400,
-                     title="Relation price / odometer / transmission")
-    fig.show()
+    #st.write('Construir un diagráma de dispersión para observar relación: precio, odómetro y transmisión')
+    # crear un scatter
+    scatter_fig = px.scatter(data_frame=car_data,
+                             x="odometer",
+                             y="price",
+                             color="transmission",
+                             width=1000,
+                             height=400,
+                             title="Relation price / odometer / transmission")
+    st.plotly_chart(scatter_fig, use_container_width=True)
+
